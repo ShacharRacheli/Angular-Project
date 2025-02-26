@@ -12,6 +12,14 @@
 <label for="role">role</label>
 <input id="role" formControlName="role" required>
 @if (u['role']&&u['role'].errors) {}
+<!-- <mat-form-field> -->
+    <!-- <mat-label>role</mat-label> -->
+    <select matNativeControl required>
+      <option value="student">student</option>
+      <option value="teacher">teacher</option>
+      <option value="admin">admin</option>
+    </select>
+  <!-- </mat-form-field> -->
 
 <button type="submit" [disabled]="userRegisterForm.invalid">Submit</button>
 </form>

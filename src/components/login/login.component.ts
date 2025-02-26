@@ -26,7 +26,9 @@ password:['',[Validators.required,Validators.minLength(5)]]
   }
   onSubmit(){
     const user=this.userLoginForm.value;
-   this.userService.login(this.userLoginForm.value).subscribe({next:response=>this.userService.saveToken(response.token),error:(e)=>{
+   this.userService.login(this.userLoginForm.value).subscribe({next:response=>{this.userService.saveToken(response.token) 
+    alert(response.message)}
+    ,error:(e)=>{
 console.error(e.error.message)
    }})  
 }

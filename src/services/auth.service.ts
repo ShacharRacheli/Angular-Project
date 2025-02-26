@@ -19,7 +19,7 @@ export class AuthService {
   saveToken(token: string) {
     sessionStorage.setItem('token', token);
   }
-  getToken(token: string) {
+  getToken() {
     return sessionStorage.getItem('token');
   }
 logout(){

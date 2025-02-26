@@ -4,7 +4,9 @@ import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validator
 import { UserRegister } from '../../models/userLogin';
 import { log } from 'console';
 import { AuthService } from '../../services/auth.service';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @Component({
   selector: 'app-register',
   imports: [ReactiveFormsModule],

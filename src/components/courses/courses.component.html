@@ -1,1 +1,17 @@
 <p>courses works!</p>
+<h2>רשימת הקורסים</h2>
+<!-- @if(allCourses){
+    <ul>
+@for(course of allCourses;track $index){
+<li>{{course.title}} {{course.description}} {{course.teacherId}}</li>
+}
+</ul> -->
+<!-- }
+@else {
+   <div>no courses </div>
+} -->
+
+
+<ng-template #noCourses>
+  <p>אין קורסים זמינים.</p>
+</ng-template>
