@@ -1,0 +1,17 @@
+<div>Register</div>
+<form [formGroup]="userRegisterForm"(ngSubmit)="onSubmit()">
+    <label for="name">name</label>
+    <input id="name" formControlName="name" required>
+    @if (u['name']&&u['name'].errors) {}
+<label for="email">email:</label>
+<input id="email" formControlName="email" required>
+@if (u['email']&&u['email'].errors) {}
+<label for="password">password</label>
+<input id="password" formControlName="password" required>
+@if (u['password']&&u['password'].errors) {}
+<label for="role">role</label>
+<input id="role" formControlName="role" required>
+@if (u['role']&&u['role'].errors) {}
+
+<button type="submit" [disabled]="userRegisterForm.invalid">Submit</button>
+</form>

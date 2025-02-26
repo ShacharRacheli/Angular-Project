@@ -1,0 +1,11 @@
+<div>Login</div>
+<form [formGroup]="userLoginForm"(ngSubmit)="onSubmit()">
+<label for="email">email:</label>
+<input id="email" formControlName="email" required>
+@if (u['email']&&u['email'].errors) {}
+<label for="password">password</label>
+<input id="password" formControlName="password" required>
+@if (u['password']&&u['password'].errors) {}
+
+<button type="submit" [disabled]="userLoginForm.invalid">Submit</button>
+</form>
